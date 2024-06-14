@@ -7,24 +7,24 @@ from typing import Union
 from typing import List
 import sys
 
-from ert_preprocessing import replace_electrode_positions
-from ert_preprocessing import calc_geometrical_factor
-from ert_preprocessing import TXRX_plot
+from ertoolbox.ert_preprocessing import replace_electrode_positions
+from ertoolbox.ert_preprocessing import calc_geometrical_factor
+from ertoolbox.ert_preprocessing import TXRX_plot
 
-from ert_preprocessing import remove_measurements
-from ert_preprocessing import add_electrode_position
-from ert_preprocessing import remove_electrode_position
+from ertoolbox.ert_preprocessing import remove_measurements
+from ertoolbox.ert_preprocessing import add_electrode_position
+from ertoolbox.ert_preprocessing import remove_electrode_position
 
 # from ert_mesh import mesh_confinedspace_2D
 # from ert_mesh import mesh_halfspace_2D
 # from ert_mesh import mesh_crosshole_2D
 # from ert_mesh import mariosmesh
 
-from ert_inversion import prepare_inversion_datacontainer
-from ert_inversion import inversion
-from ert_inversion import export_to_dft
+from ertoolbox.ert_inversion import prepare_inversion_datacontainer
+from ertoolbox.ert_inversion import inversion
+from ertoolbox.ert_inversion import export_to_dft
 
-from database_io import read_task
+from ertoolbox.database_io import read_task
 
 standard_colnames_electrodes = {
     "Cbl#": "Cable",
