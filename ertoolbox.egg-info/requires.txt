@@ -2,6 +2,7 @@ numpy
 pandas
 matplotlib
 pygimli
+gmsh
 
 [dev]
 black
