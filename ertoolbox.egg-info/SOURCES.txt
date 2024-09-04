@@ -6,6 +6,7 @@ ertoolbox/database_io.py
 ertoolbox/ert_inversion.py
 ertoolbox/ert_mesh.py
 ertoolbox/ert_parsers.py
+ertoolbox/ert_postprocessing.py
 ertoolbox/ert_preprocessing.py
 ertoolbox/ert_simulation.py
 ertoolbox/lib.py
