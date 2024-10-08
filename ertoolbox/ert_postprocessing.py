@@ -1,8 +1,5 @@
 import numpy as np
-import pandas as pd
-import pygimli as pg
-import math
-import matplotlib.pyplot as plt
+import gsw
 
 # not yet implemented in parser object!!!
 
@@ -53,5 +50,6 @@ def salinity_to_conductivity(salinity, temperature):
     """
     mt = 1 / (np.power(0.008018 * temperature + 1.0609, 2) - 0.5911)
     conductivity = (salinity**0.92 * 2.134) / mt
+    # conductivity = gsw.C_from_SP(salinity, temperature, 0)  # 0 is pressure in dbar
 
     return conductivity
