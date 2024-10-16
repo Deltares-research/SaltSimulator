@@ -34,6 +34,7 @@ for csv in directory.glob("*.csv"):
     data["resistivity"] = 1 / ert_postprocessing.salinity_to_conductivity(
         data["salinity"], data["temperature"]
     )
+    print(data["salinity"])
 
     # Define grid parameters
     x_min, x_max = data["x"].min(), data["x"].max()
@@ -142,3 +143,4 @@ for csv in directory.glob("*.csv"):
     inversion_dd_1 = inversion(
         simdata, mesh, saveresult=True, filename=str(csv), folder="../Kornwerderzand/"
     )
+    break
