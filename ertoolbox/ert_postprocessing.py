@@ -48,8 +48,8 @@ def salinity_to_conductivity(salinity, temperature):
         Conductivity [mS/m]
 
     """
-    mt = 1 / (np.power(0.008018 * temperature + 1.0609, 2) - 0.5911)
-    conductivity = (salinity**0.92 * 2.134) / mt
-    # conductivity = gsw.C_from_SP(salinity, temperature, 0)  # 0 is pressure in dbar
+    # mt = 1 / (np.power(0.008018 * temperature + 1.0609, 2) - 0.5911)
+    # conductivity = (salinity**0.92 * 2.134) / mt
+    conductivity = gsw.C_from_SP(salinity, temperature, 0)  # 0 is pressure in dbar
 
     return conductivity
