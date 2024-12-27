@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: ertoolbox
 Version: 0.1.0
-Summary: Subsurface data made easy
+Summary: Electrical Resistivity Tomographic simualtion and inversion
 Author-email: Roeland Nieboer <roeland.nieboer@deltares.nl>
 License: MIT License
         

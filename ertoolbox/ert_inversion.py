@@ -1,12 +1,13 @@
-import numpy as np
+import glob
+import os
 import sys
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import pygimli as pg
 from pygimli.physics import ert
-import matplotlib.pyplot as plt
-import glob
-from pathlib import Path
-import os
 
 
 def export_to_vtk(self, filename, folder=None, size=(16, 10), **kwargs):
@@ -61,7 +62,7 @@ def inversion(
     mgr.invert(mesh=mesh)
     mgr.showResult(cMin=cmin, cMax=cmax)
     # mgr.showResultAndFit()
-    if saveresult == True:
+    if saveresult:
         export_to_vtk(mgr, filename, folder)
 
     return mgr

@@ -11,7 +11,7 @@ version = "0.1.0"
 authors = [
     {name = "Roeland Nieboer", email = "roeland.nieboer@deltares.nl"}
 ]
-description = "Subsurface data made easy"
+description = "Electrical Resistivity Tomographic simualtion and inversion"
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = [
@@ -68,3 +68,27 @@ unfixable = ["F401"]
 
 [tool.ruff.pydocstyle]
 convention = "numpy"
+
+[tool.pixi.project]
+channels = ["gimli","conda-forge"]
+platforms = ["linux-64", "win-64"]
+
+[tool.pixi.pypi-dependencies]
+ertoolbox = { path = ".", editable = true }
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+
+[tool.pixi.tasks]
+start = "python -m pip install --no-deps --editable ./ertoolbox"
+electric = 'jupyter notebook ./notebooks/Electrical_Resistivity_Tomography.ipynb'
+acoustic = 'jupyter notebook ./notebooks/Acoutic_Tomography.ipynb'
+
+[tool.pixi.dependencies]
+numpy = "*"
+ipykernel = "*"
+pandas = "*"
+jupyter = "*"
+matplotlib = "*"
+pygimli = ">=1.5.3,<2"
