@@ -1,4 +1,4 @@
-lc=0.5;
+lc=1.0;
 lce=0.1;
 
 //boundary points
