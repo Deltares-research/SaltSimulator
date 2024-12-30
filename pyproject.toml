@@ -81,7 +81,6 @@ default = { solve-group = "default" }
 dev = { features = ["dev"], solve-group = "default" }
 
 [tool.pixi.tasks]
-start = "python -m pip install --no-deps --editable ./ertoolbox"
 electric = 'jupyter notebook ./notebooks/Electrical_Resistivity_Tomography.ipynb'
 acoustic = 'jupyter notebook ./notebooks/Acoutic_Tomography.ipynb'
 

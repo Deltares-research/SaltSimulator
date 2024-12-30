@@ -1,7 +1,56 @@
 # pixi environments
 .pixi
-
-
-# pixi environments
-.pixi
 *.egg-info
+*.lock
+
+#pygimli files
+*.vector
+*.vec
+*.bms
+*.vtk
+
+# VS-Code
+*.code-workspace
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.vscode
+
+# mypy
+.mypy_cache/
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+dist/
+var/
+wheels/
+*.egg-info/
+.install
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+.spyproject
